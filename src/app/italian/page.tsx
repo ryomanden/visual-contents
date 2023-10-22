@@ -2,6 +2,7 @@
 "use client"
 
 import { css } from "@emotion/react"
+import Image from "next/image"
 import tw from "twin.macro"
 
 const headerStyle = css({
@@ -11,6 +12,7 @@ const headerStyle = css({
         flex flex-row
         justify-center items-center
         bg-white
+        z-10
     `,
 })
 
@@ -22,10 +24,31 @@ const titleStyle = css({
     `,
 })
 
-const coverStyle = css({
+const topImage = css({
   ...tw`
-        w-screen h-screen
+        relative
+        w-screen
+        pt-20
+    `,
+})
+
+const topImageWrap = css({
+  ...tw`
+        relative
+        w-full h-full
+        aspect-video
+        flex flex-row
+        justify-start items-center
+    `,
+})
+
+const topImageText = css({
+  ...tw`
+        pl-10
+        text-white
+        font-bold text-lg
         
+        z-10
     `,
 })
 
@@ -35,7 +58,20 @@ function App() {
       <div css={headerStyle}>
         <h1 css={titleStyle}>イタリアン　CIT</h1>
       </div>
-      <div css={coverStyle}></div>
+      <div css={topImage}>
+        <div css={topImageWrap}>
+          <Image
+            css={{ ...tw`object-cover` }}
+            src="/2023素材例/こだわり１.jpg"
+            quality={100}
+            alt="image"
+            fill
+          />
+          <p css={topImageText}>
+            幸せを呼ぶ…ワインと国産牛肉とチーズの美味しいお店です。
+          </p>
+        </div>
+      </div>
     </div>
   )
 }
