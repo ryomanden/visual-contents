@@ -16,7 +16,8 @@
     "@emotion/styled": "^11.11.0",
     "next": "^13.4.12",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vercel": "^32.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
