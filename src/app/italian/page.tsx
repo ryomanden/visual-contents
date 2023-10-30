@@ -62,7 +62,7 @@ function App() {
         <div css={topImageWrap}>
           <Image
             css={{ ...tw`object-cover` }}
-            src="/2023素材例/こだわり１.jpg"
+            src="/italian/こだわり１.jpg"
             quality={100}
             alt="image"
             fill
