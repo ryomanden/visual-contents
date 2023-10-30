@@ -2,12 +2,12 @@
 
 "use client"
 
-import Link from "next/link"
+import { ButtonOutline } from "@/components"
 
 function App() {
   return (
     <div>
-      <Link href={"/cake"}>cake</Link>
+      <ButtonOutline href={"/cake"}>Cake</ButtonOutline>
     </div>
   )
 }
