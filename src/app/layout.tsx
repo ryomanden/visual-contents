@@ -1,7 +1,8 @@
+import { MenuButton } from "@/components"
 import GlobalStyles from "@/styles/GlobalStyles"
 
 export const metadata = {
-  title: "Twin",
+  title: "Visual Contents Design 課題",
   description: "",
 }
 
@@ -13,6 +14,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
+        <MenuButton />
         <GlobalStyles />
         {children}
       </body>
