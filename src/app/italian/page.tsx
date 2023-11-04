@@ -5,6 +5,8 @@ import { css } from "@emotion/react"
 import Image from "next/image"
 import tw from "twin.macro"
 
+import WrappedImage from "@/components/WrappedImage"
+
 const headerStyle = css({
   ...tw`
         w-screen h-20
@@ -47,8 +49,15 @@ const topImageText = css({
         pl-10
         text-white
         font-bold text-lg
-        
         z-10
+    `,
+})
+
+const contentWrap = css({
+  ...tw`
+        w-full
+        p-5
+        border
     `,
 })
 
@@ -71,6 +80,10 @@ function App() {
             幸せを呼ぶ…ワインと国産牛肉とチーズの美味しいお店です。
           </p>
         </div>
+      </div>
+      <div css={contentWrap}>
+        <h2 css={tw`text-2xl font-bold`}>こだわり１</h2>
+        <WrappedImage src="/italian/こだわり１.jpg" alt="こだわり１" />
       </div>
     </div>
   )
