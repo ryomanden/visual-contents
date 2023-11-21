@@ -8,7 +8,6 @@ import tw from "twin.macro"
 
 const button = css({
   ...tw`
-        absolute
         fixed
         bottom-2 right-2
         btn
