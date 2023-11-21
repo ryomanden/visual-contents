@@ -10,19 +10,37 @@ interface Props {
   src: string
   alt: string
   quality?: number
+  isCover?: boolean
 }
 
-const style = css({
+const containStyle = css({
   ...tw`
-        relative
-        w-fit h-fit
+    relative
+    w-fit
+    -z-1
+    object-contain
+  `,
+})
+
+const coverStyle = css({
+  ...tw`
+      relative
+      w-full
+      -z-1
+      object-cover
     `,
 })
 
-function WrappedImage({ src, alt, quality = 100 }: Props) {
+function WrappedImage({ src, alt, quality = 100, isCover = false }: Props) {
   return (
     <>
-      <Image css={style} src={src} alt={alt} quality={quality} fill />
+      <Image
+        css={isCover ? coverStyle : containStyle}
+        src={src}
+        alt={alt}
+        quality={quality}
+        fill
+      />
     </>
   )
 }

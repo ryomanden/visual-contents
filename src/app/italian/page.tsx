@@ -5,8 +5,6 @@ import { css } from "@emotion/react"
 import Image from "next/image"
 import tw from "twin.macro"
 
-import WrappedImage from "@/components/WrappedImage"
-
 const headerStyle = css({
   ...tw`
         w-screen h-20
@@ -55,7 +53,10 @@ const topImageText = css({
 
 const contentWrap = css({
   ...tw`
-        w-full
+        relative
+        w-full h-20
+        flex flex-col
+        justify-start items-center
         p-5
         border
     `,
@@ -71,7 +72,7 @@ function App() {
         <div css={topImageWrap}>
           <Image
             css={{ ...tw`object-cover` }}
-            src="/italian/こだわり１.jpg"
+            src="/italian/kodawari1.jpg"
             quality={100}
             alt="image"
             fill
@@ -83,7 +84,14 @@ function App() {
       </div>
       <div css={contentWrap}>
         <h2 css={tw`text-2xl font-bold`}>こだわり１</h2>
-        <WrappedImage src="/italian/こだわり１.jpg" alt="こだわり１" />
+        <div css={tw`relative w-20 h-20 border`}>
+          <Image
+            css={tw`object-cover`}
+            src="/italian/kodawari1.jpg"
+            alt="こだわり１"
+            fill
+          />
+        </div>
       </div>
     </div>
   )
