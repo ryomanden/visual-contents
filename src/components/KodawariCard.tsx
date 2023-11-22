@@ -44,7 +44,7 @@ function KodawariCard({ title, subtitle, image, description }: Props) {
         >
           {image.map(img => (
             // eslint-disable-next-line react/jsx-key
-            <div tw={"relative w-full h-full aspect-square"}>
+            <div tw={"relative w-full h-auto aspect-square"}>
               <Image
                 tw={"object-cover rounded-lg shadow"}
                 src={img}
