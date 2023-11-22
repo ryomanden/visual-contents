@@ -124,8 +124,8 @@ function App() {
         </svg>
         <h1 css={titleStyle}>Italian CIT</h1>
       </header>
-      <div css={topImage}>
-        <div css={topImageWrap}>
+      <div tw={"hero min-h-screen"}>
+        <div tw={"h-full -z-1"}>
           <Image
             tw={"object-cover"}
             src="/italian/exterior.jpg"
