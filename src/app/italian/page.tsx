@@ -164,7 +164,7 @@ function App() {
         </div>
       </div>
       <footer tw={"footer p-10 bg-neutral text-neutral-content"}>
-        <aside tw={"h-full flex items-center"}>
+        <aside tw={"flex items-center"}>
           <p tw={"font-bold text-3xl"}>イタリアンCIT</p>
         </aside>
         <nav>
