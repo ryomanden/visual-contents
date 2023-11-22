@@ -133,9 +133,15 @@ function App() {
             alt="image"
             fill
           />
-          <p css={topImageText}>
-            幸せを呼ぶ…ワインと国産牛肉とチーズの美味しいお店です。
-          </p>
+        </div>
+        <div tw={"hero-overlay bg-opacity-60"} />
+        <div tw={"hero-content text-center text-neutral-content"}>
+          <div tw={"max-w-md"}>
+            <h1 tw={"mb-5 text-5xl font-bold"}>Italian CIT</h1>
+            <p tw={"mb-5"}>
+              幸せを呼ぶ...ワインと国産牛肉とチーズの美味しいお店です。
+            </p>
+          </div>
         </div>
       </div>
       <div tw={"w-full max-w-7xl px-10"}>
